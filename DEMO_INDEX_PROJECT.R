@@ -84,12 +84,15 @@ head(fhouse_df$fhiscaletest) ##fhi scaled values
 head(polity_df$poliscale)
 head(polity_df$poliscaletest) ##polity scaled values
 
-
-# ----------------------- 
-
 ## 2.2 Normalize country names -----------------------------------
+install.packages("countrycode")
+install_github('vincentarelbundock/countrycode')
+library(countrycode)
 
-# ----------------------- 
+unique(vdem_df[c("country_name")])
+unique(idea_df[c("ID_country_name")])
+unique(fhouse_df[c("country")])
+unique(polity_df[c("polity_annual_country")])
 
 ## 3 Summary stats --------------------------------------
 # N, Mean, Med, SD, Min, Max
